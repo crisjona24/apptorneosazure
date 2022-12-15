@@ -36,6 +36,7 @@ router.register(r'encuentroRes', views.EncuentroViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     #falta la ruta de principio
+    path('',index),
     path('index/',index),
     #url para administrar (se accede a esta)
     path('administrador/',administrador),
