@@ -8,28 +8,28 @@
 </head>
 <body background="{% static '/imagenes/Futbolfondo1.jpg' %}">
   <br>
-  <font color="white"><h5 style = "Font-family: Tahoma, Verdana, Segoe, sans-serif">&nbsp Ingrese los datos del Implemento:</h5></font>
+  <font color="black"><h5 style = "Font-family: Tahoma, Verdana, Segoe, sans-serif">&nbsp Ingrese los datos del Implemento:</h5></font>
   <br>
 <form class="row g-3" action="" method="GET">
   {% csrf_token %}
    <div class="col-md-4">
-      <font color="white"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">&nbsp Pertenece al Torneo</label></font>
+      <font color="black"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">&nbsp Pertenece al Torneo</label></font>
       <h6>&nbsp {{formularioImplementos.PropiedadTorneo}}</h6>
   </div>
   <div class="col-md-4">
-      <font color="white"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">Nombre</label></font>
+      <font color="black"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">Nombre</label></font>
       <h6>{{formularioImplementos.nombre}}</h6>
   </div>
   <div class="col-md-4">
-      <font color="white"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">Cantidad</label></font>
+      <font color="black"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">Cantidad</label></font>
       <h6>{{formularioImplementos.cantidad}}</h6>
   </div>
   <div class="col-md-4">
-      <font color="white"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">&nbsp Descripción</label></font>
+      <font color="black"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">&nbsp Descripción</label></font>
       <h6>&nbsp {{formularioImplementos.descripcion}}</h6>
   </div>
   <div class="col-md-4">
-      <font color="white"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">Tipo</label></font>
+      <font color="black"><label class="form-label" style = "font-family: Lucida Bright, Georgia;">Tipo</label></font>
       <h6>{{formularioImplementos.tipo_Im}}</h6>
   </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
