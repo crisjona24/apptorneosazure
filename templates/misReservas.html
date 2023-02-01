@@ -16,7 +16,7 @@
    <a class="btn btn-primary" href="/agregarTicket/" role="button" style = "font-family: Lucida Bright, Georgia;">Registrar Reserva</a>
   <form class="d-flex" action="/buscarReserva/" method="GET">
     {% csrf_token %}
-    <input class="form-control me-2" type="search" placeholder="Buscar Reservas" aria-label="Search"  name="textobuscar">
+    <input class="form-control me-2" type="search" autocomplete="off" placeholder="Buscar Reservas" aria-label="Search"  name="textobuscar">
     <button class="btn btn-danger" type="submit" style = "font-family: Lucida Bright, Georgia;">Buscar</button>
   </form>
    </div>

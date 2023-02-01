@@ -19,7 +19,7 @@
     <a class="btn btn-primary" href="/agregarTorneo/" role="button" style = "font-family: Lucida Bright, Georgia;">Registrar Torneo</a>
     <form class="d-flex" action="/buscarTorneo/" method="GET">
       {% csrf_token %}
-      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="textobuscar">
+      <input class="form-control me-2" type="search" autocomplete="off" placeholder="Buscar" aria-label="Search" name="textobuscar">
       <button class="btn btn-danger" type="submit" style = "font-family: Lucida Bright, Georgia;">Buscar</button>
     </form>
   </div>

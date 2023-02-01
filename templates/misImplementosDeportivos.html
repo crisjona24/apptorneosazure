@@ -19,7 +19,7 @@
     <a class="btn btn-primary" href="/agregarImplementos/" role="button" style = "font-family: Lucida Bright, Georgia;">Registrar Implementos</a>
    <form class="d-flex" action="/buscarImplemento/" method="GET">
     {% csrf_token %}
-    <input class="form-control me-2" type="search" placeholder="Buscar Implemento" aria-label="Search"  name="textobuscar">
+    <input class="form-control me-2" autocomplete="off" type="search" placeholder="Buscar Implemento" aria-label="Search"  name="textobuscar">
     <button class="btn btn-danger" type="submit" style = "font-family: Lucida Bright, Georgia;">Buscar</button>
   </form>
       </div>

@@ -16,7 +16,7 @@
   <a class="btn btn-primary" href="/agregarJugador/" role="button" style = "font-family: Lucida Bright, Georgia;">Registrar Jugador</a>
   <form class="d-flex" action="/buscarJugador/" method="GET">
     {% csrf_token %}
-    <input class="form-control me-2" type="search" placeholder="Buscar Jugador" aria-label="Search"  name="textobuscar">
+    <input class="form-control me-2" type="search" autocomplete="off" placeholder="Buscar Jugador" aria-label="Search"  name="textobuscar">
     <button class="btn btn-outline-danger" type="submit" style = "font-family: Lucida Bright, Georgia;">Buscar</button>
   </form>
     </div>

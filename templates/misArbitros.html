@@ -15,7 +15,7 @@
     <nav class="navbar navbar-light ">
   <div class="container-fluid">
     <a class="btn btn-primary" href="/agregarArbitro/" role="button" style = "font-family: Lucida Bright, Georgia;">Registrar Arbitro</a>
-  <form class="d-flex" action="/buscarArbitro/" method="GET">
+  <form class="d-flex" action="/buscarArbitro/" method="GET" autocomplete="off">
     {% csrf_token %}
     <input class="form-control me-2" type="search" placeholder="Buscar Arbitro" aria-label="Search"  name="textobuscar">
     <button class="btn btn-danger" type="submit" style = "font-family: Lucida Bright, Georgia;">Buscar</button>
