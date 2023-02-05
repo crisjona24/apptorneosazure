@@ -22,7 +22,7 @@ def galeria(request): #ventana para mostrar una simple galeria de fotografias
 #
 #
 def index(request): #pestaña para el usuario
-	return render(request, "index.html",{})
+	return render(request, "DomainVerification.html",{})
 
 def administrador(request): #pestaña para operaciones  (Agregar/Eliminar....)
 	return render(request, "administrador.html")
