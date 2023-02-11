@@ -27,6 +27,7 @@
         <div class="card-body">
 
             <form class="row g-2" action="/validacion/" method="POST">
+                {% csrf_token %}
                 <div class="mb-3">
                     <label for="" class="col-form-label">Nombre de usuario:</label>
                     <input type="name" class="form-control" id="" name="username" autocomplete="off">

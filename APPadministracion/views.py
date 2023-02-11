@@ -739,9 +739,9 @@ def perfil(request):  # perfil
 #
 #
 def validar(request):
-    if request.GET["username"] and request.GET["clave"]:
-        usuario = request.GET["username"]
-        clave = request.GET["clave"]
+    if request.POST["username"] and request.POST["clave"]:
+        usuario = request.POST["username"]
+        clave = request.POST["clave"]
         if len(usuario) > 0 and len(clave) > 0:
             personaU = Persona.objects.filter(user__icontains=usuario)
             personaC = Persona.objects.filter(contra__icontains=clave)
