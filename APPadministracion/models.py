@@ -4,13 +4,13 @@ from django.db import models
 
 #Clase que hara referencia al perfil de usuario
 class Persona(models.Model):
-    nombre = models.CharField(max_length=30, blank=False)
-    apellido = models.CharField(max_length=30, blank=False)
-    correo = models.EmailField()
-    celular = models.CharField(max_length=10, blank=False)
-    cedula = models.CharField(max_length=10, blank=False)
-    user = models.CharField(max_length=15, blank=False)
-    contra = models.CharField(max_length=15, blank=False)
+    nombre = models.CharField(max_length=140, blank=False,null=True)
+    apellido = models.CharField(max_length=140, blank=False,null=True)
+    correo = models.EmailField(unique=True, blank=True, null=True)
+    celular = models.CharField(max_length=10, blank=False,null=True)
+    cedula = models.CharField(max_length=10, blank=False,unique=True, null=True)
+    user = models.CharField(max_length=15, blank=False,null=True,unique=True)
+    contra = models.CharField(max_length=15, blank=False,null=True)
 
 
 #Clase que tendra los datos de cada torneo

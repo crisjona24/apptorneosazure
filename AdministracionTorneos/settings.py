@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'APPadministracion',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -74,7 +75,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'AdministracionTorneos.wsgi.application'
-
+CSRF_COOKIE_SECURE = False
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -87,24 +88,27 @@ DATABASES = {
 }
 
 """
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'postgres',
-       'USER': 'postgres',
-       'HOST': 'db_postgres',
-      'PORT': 5432,
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'OPTIONS': {
+                'options': '-c search_path=django,public'
+            },
+            'NAME': 'torneos',
+            'USER': 'postgres',
+            'PASSWORD': 'postgres',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        },
     }
-}
-"""
-
-DATABASES = {
-    'default':  dj_database_url .config(
-        default='postgresql://postgres:postgres@localhost/postgres',
-        conn_max_age=600
-    )
-}
+else:
+    DATABASES = {
+        'default':  dj_database_url .config(
+            default='postgresql://postgres:postgres@localhost/postgres',
+            conn_max_age=600
+        )
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
