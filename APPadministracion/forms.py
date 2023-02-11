@@ -80,6 +80,16 @@ class FormularioPersona(forms.ModelForm):
         max_length = {
             'contra': 16,
         }
+        labels = {
+            'contra': 'Contraseña',
+            'correo': 'Correo',
+            'user': 'Usuario',
+            'cedula': 'Cedula',
+        }
+
+        help_texts = {
+            'contra': 'La contraseña debe tener al menos 8 caracteres, al menos un número, al menos una letra mayúscula y al menos un carácter especial $, #, @, %.',
+        }
 
 
 class FormularioTorneo(forms.ModelForm):
